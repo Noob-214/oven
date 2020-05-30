@@ -1,8 +1,8 @@
 FROM ubuntu:focal
-LABEL maintainer "alanndz <alanmahmud0@gmail.com>"
+LABEL maintainer "Dicky Herlambang <herlambangdicky50@gmail.com>"
 
-# Indonesian timezone (GMT+8)	
-ENV TZ=Asia/Makassar
+# Indonesian timezone (GMT+7)	
+ENV TZ=Asia/Jakarta
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Tidy-up
@@ -68,20 +68,14 @@ RUN apt-get update -qq && \
 	zstd
 
 # My Github
-RUN git config --global user.name "alanndz"
-RUN git config --global user.email "alanmahmud0@gmail.com"
-
-# Clang Najahii
-RUN git clone https://github.com/NusantaraDevs/clang.git -b dev/10.0 --depth=1 /root/nusantara-10
-
-# Proton Clang 10
-RUN git clone https://github.com/HANA-CI-Build-Project/proton-clang -b master --depth=1 /root/proton-10
+RUN git config --global user.name "Nicklas373"
+RUN git config --global user.email "herlambangdicky5@gmail.com"
 
 # Proton Clang 11
-RUN git clone https://github.com/HANA-CI-Build-Project/proton-clang -b proton-clang-11 --depth=1 /root/proton-11
+RUN git clone https://github.com/kdrag0n/proton-clang -b master --depth=1 /root/proton-11
 
-# Avalon Clang 11
-RUN git clone https://github.com/Haseo97/Avalon-Clang-11.0.1 -b 11.0.1 --depth=1 /root/avalon-11
+# Proton Clang 11 (Backup)
+RUN git clone https://github.com/HANA-CI-Build-Project/proton-clang -b proton-clang-11 --depth=1 /root/p-clang
 
-# Twisted Clang 11
-RUN git clone https://github.com/TwistedPrime/twisted-clang -b master --depth=1 /root/twisted-11
+# Azure Clang 11 (Alternative)
+RUN git clone https://github.com/Panchajanya1999/azure-clang -b 11.x --depth=1 /root/azure
