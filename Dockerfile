@@ -24,6 +24,7 @@ RUN apt-get update -qq && \
 	cmake \
 	curl \
 	expect \
+	elfutils \
 	flex \
 	g++ \
 	gawk \
