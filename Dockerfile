@@ -24,7 +24,6 @@ RUN apt-get update -qq && \
 	cmake \
 	curl \
 	expect \
-	elfutils \
 	flex \
 	g++ \
 	gawk \
@@ -73,10 +72,7 @@ RUN git config --global user.name "Nicklas373"
 RUN git config --global user.email "herlambangdicky5@gmail.com"
 
 # Proton Clang 11
-RUN git clone https://github.com/kdrag0n/proton-clang -b master --depth=1 /root/proton-11
+RUN git clone https://github.com/HANA-CI-Build-Project/proton-clang -b proton-clang-11 --depth=1 /root/proton
 
-# Proton Clang 11 (Backup)
-RUN git clone https://github.com/HANA-CI-Build-Project/proton-clang -b proton-clang-11 --depth=1 /root/p-clang
-
-# Azure Clang 11 (Alternative)
-RUN git clone https://github.com/Panchajanya1999/azure-clang -b 11.x --depth=1 /root/azure
+# Nusantara Clang 11
+RUN git clone https://github.com/NusantaraDevs/clang -b dev/11.0 --depth=1 /root/nusantara
