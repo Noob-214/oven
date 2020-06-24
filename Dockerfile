@@ -72,7 +72,7 @@ RUN git config --global user.name "Nicklas373"
 RUN git config --global user.email "herlambangdicky5@gmail.com"
 
 # Proton Clang 11
-RUN git clone https://github.com/HANA-CI-Build-Project/proton-clang -b proton-clang-11 --depth=1 /root/proton
+RUN git clone https://github.com/kdrag0n/proton-clang -b master --depth=1 /root/proton
 
 # Nusantara Clang 11
 RUN git clone https://github.com/NusantaraDevs/clang -b dev/11.0 --depth=1 /root/nusantara
