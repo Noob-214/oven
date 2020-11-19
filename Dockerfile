@@ -74,5 +74,9 @@ RUN git config --global user.email "herlambangdicky5@gmail.com"
 # Proton Clang 11
 RUN git clone https://github.com/kdrag0n/proton-clang -b master --depth=1 /root/proton
 
-# Nusantara Clang 11
-RUN git clone https://github.com/NusantaraDevs/clang -b dev/11.0 --depth=1 /root/nusantara
+# AOSP Clang 11
+RUN git clone https://github.com/Nicklas373/aosp-clang -b r399163b --depth=1 /root/aosp-clang
+
+# GCC 4.9 (Non-elf)
+RUN git clone https://github.com/KudProject/aarch64-linux-android-4.9 -b master --depth=1 /root/gcc-4.9_64
+RUN git clone https://github.com/KudProject/arm-linux-androideabi-4.9 -b master --depth=1 /root/gcc-4.9
