@@ -78,8 +78,8 @@ RUN git clone https://github.com/kdrag0n/proton-clang -b master --depth=1 /root/
 # AOSP Clang 11
 RUN git clone https://github.com/Nicklas373/aosp-clang -b r399163b --depth=1 /root/aosp-clang
 
-# SDCLANG 8.0.2
-RUN git clone https://git.rip/rama982/sdclang-8.0 -b master --depth=1 /root/sdclang
+# SDCLANG 10.0.9
+RUN git clone https://github.com/TRINKET-ANDROID/proprietary_vendor_qcom_sdclang -b ruby --depth=1 /root/sdclang
 
 # GCC 4.9 (Non-elf)
 RUN git clone https://github.com/KudProject/aarch64-linux-android-4.9 -b master --depth=1 /root/gcc-4.9_64
