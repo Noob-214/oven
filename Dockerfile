@@ -79,7 +79,7 @@ RUN git clone https://github.com/kdrag0n/proton-clang -b master --depth=1 /root/
 RUN git clone https://github.com/Nicklas373/aosp-clang -b r399163b --depth=1 /root/aosp-clang
 
 # SDCLANG 10.0.9
-RUN git clone https://github.com/TRINKET-ANDROID/proprietary_vendor_qcom_sdclang -b ruby --depth=1 /root/sdclang-10
+RUN git clone https://github.com/ThankYouMario/proprietary_vendor_qcom_sdclang -b ruby --depth=1 /root/sdclang-10
 
 # SDCLANG 8.0.12
 RUN git clone https://git.rip/rama982/sdclang-8.0 -b master --depth=1 /root/sdclang-8
